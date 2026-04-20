@@ -10,7 +10,7 @@ const CONFIG = {
   nb_experiences:     3,       // années d'expérience
   nb_tournages:       5,       // nombre de tournages
   nb_twitch:          1200,    // abonnés Twitch
-  nb_collecte:        1620,    // euros récoltés pour associations
+  nb_collecte:        1960,    // euros récoltés pour associations
 
   // ── Compteurs réseaux sociaux
   nb_instagram:       33,      // abonnés Instagram
@@ -18,13 +18,13 @@ const CONFIG = {
   nb_projets:        4,        // projets publiés
 
   // ── CV sécurisé
-  cv_code:           '2024',   // code d'accès pour le CV
-  cv_url:            'cv-marc-lory.pdf', // URL/nom du fichier CV
+  cv_code:           'CV26',   // code d'accès pour le CV
+  cv_url:            'CV2025vf.pdf', // URL/nom du fichier CV
 
   // ── Typewriter hero
-  typewriter_words:  ['Comédien', 'Figurant', 'Créateur', 'Storyteller', 'Disponible'],
+  typewriter_words:  ['Comédien', 'Figurant', 'Créateur de contenu', 'Disponible'],
   typewriter_speed:  90,   // ms par lettre
-  typewriter_pause:  2200, // ms entre les mots
+  typewriter_pause:  2000, // ms entre les mots
 
   // ── Instagram handle (pour les liens)
   instagram_handle:  'marc_comedien_figurant',

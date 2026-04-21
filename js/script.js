@@ -8,14 +8,14 @@
 const CONFIG = {
   // ── Chiffres clés (section À propos + Réseaux)
   nb_experiences:     3,       // années d'expérience
-  nb_tournages:       5,       // nombre de tournages
-  nb_twitch:          1200,    // abonnés Twitch
-  nb_collecte:        1960,    // euros récoltés pour associations
+  nb_tournages:       8,       // nombre de tournages (modifié: 5 -> 8)
+  nb_tiktok:          15900,   // abonnés TikTok
+  nb_collecte:        0,       // euros récoltés pour associations (modifié: 1960 -> 0 = RIEN)
 
   // ── Compteurs réseaux sociaux
   nb_instagram:       33,      // abonnés Instagram
-  nb_linkedin:        300,     // connexions LinkedIn
-  nb_projets:        4,        // projets publiés
+  nb_twitch:          1200,    // abonnés Twitch
+  nb_projets:         4,       // projets publiés
 
   // ── CV sécurisé
   cv_code:           'CV26',   // code d'accès pour le CV
@@ -28,6 +28,9 @@ const CONFIG = {
 
   // ── Instagram handle (pour les liens)
   instagram_handle:  'marc_comedien_figurant',
+  
+  // ── TikTok handle
+  tiktok_handle:     'plansekance',
 };
 
 /* ══════════════════════════════════════════════════════════
@@ -222,8 +225,8 @@ function animateCounter(el) {
 function initCounters() {
   // Sync with CONFIG values
   const syncMap = {
-    '.about-stats .stat-num': [CONFIG.nb_experiences, CONFIG.nb_tournages, CONFIG.nb_twitch, CONFIG.nb_collecte],
-    '.social-counters .sc-num': [CONFIG.nb_instagram, CONFIG.nb_twitch, CONFIG.nb_linkedin, CONFIG.nb_projets],
+    '.about-stats .stat-num': [CONFIG.nb_experiences, CONFIG.nb_tournages, CONFIG.nb_tiktok],
+    '.social-counters .sc-num': [CONFIG.nb_instagram, CONFIG.nb_tiktok, CONFIG.nb_twitch, CONFIG.nb_projets],
   };
   Object.entries(syncMap).forEach(([sel, vals]) => {
     $$(sel).forEach((el, i) => { if (vals[i] !== undefined) el.dataset.target = vals[i] });
@@ -657,12 +660,17 @@ function initLazyImages() {
 }
 
 /* ══════════════════════════════════════════════════════════
-   INSTAGRAM — update all insta links with real handle
+   INSTAGRAM & TIKTOK — update all social links
    ══════════════════════════════════════════════════════════ */
-function initInstaLinks() {
-  const baseUrl = `https://www.instagram.com/${CONFIG.instagram_handle}/`;
-  // All instagram thumb links redirect to profile (API needed for individual posts)
-  $$('.insta-thumb').forEach(a => { a.href = baseUrl });
+function initSocialLinks() {
+  const instaUrl = `https://www.instagram.com/${CONFIG.instagram_handle}/`;
+  const tiktokUrl = `https://www.tiktok.com/@${CONFIG.tiktok_handle}`;
+  
+  // All instagram thumb links redirect to profile
+  $$('.insta-thumb').forEach(a => { a.href = instaUrl });
+  
+  // Update TikTok links if any
+  $$('.tiktok-link').forEach(a => { a.href = tiktokUrl });
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -693,5 +701,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFooter();
   initSmoothScroll();
   initLazyImages();
-  initInstaLinks();
+  initSocialLinks();
 });

@@ -563,6 +563,37 @@ body.light .icon-light { display:block }
 
 .about-bio { font-size:.9rem; line-height:1.85; margin-bottom:1rem; color:var(--text) }
 
+/* Physique Specs */
+.about-physique {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.2rem;
+  margin: 2.2rem 0;
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r);
+}
+.physique-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.p-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold-lt);
+  font-weight: 600;
+}
+.p-value {
+  font-family: var(--font-d);
+  font-size: 1.15rem;
+  color: var(--white);
+  font-weight: 500;
+}
+
 /* Traits */
 .about-traits {
   display:grid; grid-template-columns:repeat(4,1fr);
@@ -724,6 +755,33 @@ body.light .icon-light { display:block }
 }
 .bento-item:hover .bento-thumb { transform:scale(1.06); filter:brightness(.4) }
 .bento-item:hover .bento-video { opacity:.9 }
+
+/* State for items without video */
+.bento-item.upcoming { 
+  cursor: default; 
+  background: var(--bg3);
+  border: 1px dashed var(--border-hv);
+}
+.bento-item.upcoming .bento-overlay {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle, rgba(184,149,74,0.12) 0%, transparent 75%);
+}
+.bento-item.upcoming .bento-tags { justify-content: center; margin-bottom: 1.2rem; }
+.bento-item.upcoming .bento-title {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.1;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: upcomingPulse 4s ease-in-out infinite;
+}
+
+@keyframes upcomingPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; filter: brightness(1); }
+  50% { transform: scale(1.05); opacity: 1; filter: brightness(1.3); }
+}
 
 .bento-overlay {
   position:absolute; inset:0; z-index:2;

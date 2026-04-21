@@ -1,694 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-53H9HRQK');</script>
-
   <meta charset="UTF-8">
+  <title>Maintenance en cours</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marc Lory — Comédien & Figurant | Site officiel</title>
-  <meta name="description" content="Marc Lory, comédien et figurant basé en Île-de-France. Cinéma, publicité, TV. Expériences Warner Bros, TF1, YouTube.">
-  <link rel="canonical" href="https://lory-marc.fr/">
-  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <!-- OG / Twitter -->
-  <meta property="og:title" content="Marc Lory — Comédien & Figurant">
-  <meta property="og:description" content="Portfolio de Marc Lory, comédien et figurant. Expériences Warner Bros, TF1, cinéma indépendant.">
-  <meta property="og:image" content="https://lory-marc.fr/Photo portrait - LORY Marc_1753948731388.jpg">
-  <meta property="og:url" content="https://lory-marc.fr/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow: hidden;
+    }
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Marc Lory","jobTitle":"Comédien et Figurant","url":"https://lory-marc.fr","email":"lorymarc.pro@gmail.com","telephone":"+33743673537","address":{"@type":"PostalAddress","addressLocality":"Ecquevilly","postalCode":"78920","addressCountry":"FR"},"sameAs":["https://www.instagram.com/marc_comedien_figurant","https://www.linkedin.com/in/marc-l-938655214"]}</script>
+    .container {
+      text-align: center;
+      backdrop-filter: blur(15px);
+      background: rgba(255,255,255,0.05);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease;
+    }
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .loader {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      background: white;
+      border-radius: 50%;
+      animation: bounce 1.5s infinite;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .background-circles span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.1);
+      animation: move 25s linear infinite;
+      bottom: -150px;
+      border-radius: 50%;
+    }
+
+    .background-circles span:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+
+    .background-circles span:nth-child(2) {
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    .background-circles span:nth-child(3) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+    }
+
+    .background-circles span:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    .background-circles span:nth-child(5) {
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-  <!-- GTM noscript -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53H9HRQK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Custom cursor -->
-  <div id="cursor-dot" aria-hidden="true"></div>
-  <div id="cursor-ring" aria-hidden="true"></div>
-
-  <!-- Loader -->
-  <div id="loader" aria-hidden="true">
-    <div class="loader-content">
-      <div class="loader-name">
-        <span class="ln-first">MARC</span>
-        <span class="ln-sep" aria-hidden="true"></span>
-        <span class="ln-last">LORY</span>
-      </div>
-      <div class="loader-bar-wrap"><div class="loader-bar-fill"></div></div>
-      <p class="loader-sub">Comédien &amp; Figurant</p>
-    </div>
+  <div class="background-circles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  <!-- Scroll progress -->
-  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="container">
+    <h1>🚧 Maintenance en cours</h1>
+    <p>Le site est actuellement en cours de mise à jour.<br>Merci de revenir dans quelques instants.</p>
 
-  <!-- ═══════════════ NAVBAR ═══════════════ -->
-  <header id="site-header">
-    <nav class="navbar" role="navigation" aria-label="Navigation principale">
-      <a href="#hero" class="nav-logo">
-        <span class="nl-first">M</span><span class="nl-dot">·</span><span class="nl-last">L</span>
-      </a>
-      <ul class="nav-menu" role="list">
-        <li><a href="#hero"        class="nav-link">Accueil</a></li>
-        <li><a href="#about"       class="nav-link">À propos</a></li>
-        <li><a href="#showreel"    class="nav-link">Bande démo</a></li>
-        <li><a href="#experiences" class="nav-link">Expériences</a></li>
-        <li><a href="#gallery"     class="nav-link">Galerie</a></li>
-        <li><a href="#social"      class="nav-link">Réseaux</a></li>
-        <li><a href="#contact"     class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="Changer le thème">
-          <i class="fas fa-moon icon-dark"></i>
-          <i class="fas fa-sun icon-light"></i>
-        </button>
-        <button id="cv-btn" class="btn btn-gold" aria-label="Télécharger CV">
-          <i class="fas fa-download"></i><span>CV</span>
-        </button>
-        <button class="hamburger" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- CV Popup -->
-  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title">
-    <div class="popup">
-      <button class="popup-close" id="popup-cancel" aria-label="Fermer"><i class="fas fa-times"></i></button>
-      <div class="popup-icon"><i class="fas fa-file-pdf"></i></div>
-      <h3 id="popup-title">Accès sécurisé</h3>
-      <p>Entrez le code pour télécharger le CV</p>
-      <input type="password" id="code-input" placeholder="• • • •" autocomplete="off" aria-label="Code d'accès">
-      <p id="error-msg" role="alert" aria-live="polite"></p>
-      <button id="popup-submit" class="btn btn-gold btn-full">Valider</button>
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
     </div>
+
+    <div class="footer">lory-marc.fr — Dev en action ⚙️</div>
   </div>
-  <div id="toast-wrap" aria-live="polite"></div>
 
-  <main>
-
-    <!-- ═══════════════ 01 HERO ═══════════════ -->
-    <section id="hero" class="hero">
-      <div class="grain" aria-hidden="true"></div>
-      <!-- Hero background: theatre image from Unsplash (libre de droits) as fallback, video if available -->
-      <div class="hero-bg" aria-hidden="true">
-        <img
-          class="hero-bg-img"
-          src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=1920&q=80&auto=format&fit=crop"
-          alt=""
-          loading="eager"
-        >
-        <video class="hero-video" autoplay muted loop playsinline preload="none">
-          <source src="grandpere.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="hero-eyebrow rh" style="--d:.1s">
-          <span class="he-dot" aria-hidden="true"></span>Île-de-France · Disponible
-        </p>
-        <h1 class="hero-title rh" style="--d:.3s">
-          <em>Marc</em><br><span class="ht-last">Lory</span>
-        </h1>
-        <div class="hero-typewriter rh" style="--d:.55s">
-          <span class="tw-prefix">Je suis&nbsp;</span>
-          <span id="tw-text"></span><span class="tw-cursor" aria-hidden="true">|</span>
-        </div>
-        <div class="hero-badges rh" style="--d:.8s">
-          <span class="badge"><i class="fas fa-film"></i> Warner Bros</span>
-          <span class="badge"><i class="fas fa-tv"></i> TF1</span>
-          <span class="badge"><i class="fab fa-youtube"></i> YouTube</span>
-          <span class="badge"><i class="fas fa-clapperboard"></i> 5 tournages</span>
-        </div>
-        <div class="hero-cta rh" style="--d:1.05s">
-          <a href="#showreel" class="btn btn-gold btn-lg"><i class="fas fa-play"></i> Bande démo</a>
-          <a href="#contact" class="btn btn-ghost btn-lg">Me contacter</a>
-        </div>
-      </div>
-      <a href="#about" class="hero-scroll" aria-label="Défiler vers À propos">
-        <span>Défiler</span>
-        <div class="hs-line"></div>
-        <div class="hs-arrow" aria-hidden="true"></div>
-      </a>
-    </section>
-
-    <!-- ═══════════════ 02 ABOUT ═══════════════ -->
-    <section id="about" class="about-section">
-      <div class="about-inner container">
-        <!-- Photo -->
-        <div class="about-visual reveal">
-          <div class="about-photo-frame">
-            <img
-              src="Photo portrait - LORY Marc_1753948731388.jpg"
-              alt="Portrait Marc Lory — Comédien & Figurant"
-              loading="lazy"
-              width="480"
-              height="600"
-            >
-            <div class="apf-line apf-line-v" aria-hidden="true"></div>
-            <div class="apf-line apf-line-h" aria-hidden="true"></div>
-            <div class="apf-label" aria-hidden="true">Comédien · Figurant</div>
-          </div>
-        </div>
-
-        <!-- Text -->
-        <div class="about-text reveal" data-delay="120">
-          <span class="section-label">À propos</span>
-          <h2>L'acteur derrière<br><em>le personnage</em></h2>
-          <blockquote class="about-quote">
-            « Chaque rôle est une nouvelle vie à habiter pleinement. »
-          </blockquote>
-          <p class="about-bio">
-            Passionné par le storytelling et le contact humain, j'ai bâti une aisance naturelle face caméra à travers des années de live et de création de contenu. Aujourd'hui, cette expérience nourrit chaque rôle que j'incarne — du figurant expressif au personnage complexe.
-          </p>
-          <p class="about-bio">
-            Discipliné, ponctuel, pleinement investi : je m'adapte à chaque vision artistique, d'un court-métrage indépendant à une production internationale. Ma polyvalence et ma réactivité sont mes atouts sur le plateau.
-          </p>
-
-          <!-- Traits -->
-          <div class="about-traits">
-            <div class="trait"><i class="fas fa-bolt"></i><span>Expressif</span></div>
-            <div class="trait"><i class="fas fa-clock"></i><span>Ponctuel</span></div>
-            <div class="trait"><i class="fas fa-lightbulb"></i><span>Créatif</span></div>
-            <div class="trait"><i class="fas fa-shield-alt"></i><span>Discipliné</span></div>
-          </div>
-
-          <!-- Stats -->
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-num" data-target="3">0</span>
-              <span class="stat-lbl">Ans d'expérience</span>
-            </div>
-            <div class="stat-sep" aria-hidden="true"></div>
-            <div class="stat-item">
-              <span class="stat-num" data-target="5">0</span>
-              <span class="stat-lbl">Tournages</span>
-            </div>
-            <div class="stat-sep" aria-hidden="true"></div>
-            <div class="stat-item">
-              <span class="stat-num" data-target="1200">0</span>
-              <span class="stat-lbl">Abonnés Twitch</span>
-            </div>
-            <div class="stat-sep" aria-hidden="true"></div>
-            <div class="stat-item">
-              <span class="stat-num" data-target="1960">0</span><span class="stat-euro">€</span>
-              <span class="stat-lbl">Récoltés</span>
-            </div>
-          </div>
-
-          <!-- Meta -->
-          <div class="about-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Ecquevilly (78) · Île-de-France</span>
-            <span><i class="fas fa-car"></i> Permis B · Véhiculé</span>
-            <span><i class="fas fa-language"></i> Français natif</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ 03 SKILLS ═══════════════ -->
-    <section id="skills" class="section skills-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Aptitudes</span>
-          <h2>Compétences</h2>
-        </div>
-        <div class="skills-cols">
-          <div class="skills-col reveal">
-            <h3 class="skills-col-title"><i class="fas fa-theater-masks"></i> Jeu</h3>
-            <div class="skill-tag-grid">
-              <div class="skill-tag" data-detail="Interprétation de personnages complexes, travail d'incarnation profond.">
-                <span class="st-name">Jeu d'acteur</span><span class="st-level expert">Expert</span>
-              </div>
-              <div class="skill-tag" data-detail="Réactivité et créativité spontanée sur plateau.">
-                <span class="st-name">Improvisation</span><span class="st-level avance">Avancé</span>
-              </div>
-              <div class="skill-tag" data-detail="Voix posée, articulation claire, registres variés.">
-                <span class="st-name">Doublage / Voix-off</span><span class="st-level inter">Intermédiaire</span>
-              </div>
-              <div class="skill-tag" data-detail="Expressions faciales, corps comme outil narratif.">
-                <span class="st-name">Mime & Expression</span><span class="st-level avance">Avancé</span>
-              </div>
-            </div>
-          </div>
-          <div class="skills-col reveal" data-delay="100">
-            <h3 class="skills-col-title"><i class="fas fa-video"></i> Technique</h3>
-            <div class="skill-tag-grid">
-              <div class="skill-tag" data-detail="Maîtrise des codes caméra, placement, axe, regards.">
-                <span class="st-name">Jeu caméra</span><span class="st-level expert">Expert</span>
-              </div>
-              <div class="skill-tag" data-detail="Gestion de plusieurs flux caméra simultanément.">
-                <span class="st-name">Multi-caméras</span><span class="st-level avance">Avancé</span>
-              </div>
-              <div class="skill-tag" data-detail="Création, montage, diffusion live de contenu vidéo.">
-                <span class="st-name">Création de contenu</span><span class="st-level expert">Expert</span>
-              </div>
-              <div class="skill-tag" data-detail="Connaissance des workflows de tournage professionnel.">
-                <span class="st-name">Production vidéo</span><span class="st-level inter">Intermédiaire</span>
-              </div>
-            </div>
-          </div>
-          <div class="skills-col reveal" data-delay="200">
-            <h3 class="skills-col-title"><i class="fas fa-user"></i> Personnel</h3>
-            <div class="skill-tag-grid">
-              <div class="skill-tag" data-detail="Toujours à l'heure, fiable en toutes circonstances.">
-                <span class="st-name">Ponctualité</span><span class="st-level expert">Expert</span>
-              </div>
-              <div class="skill-tag" data-detail="Capacité à s'adapter à tout contexte, rôle ou équipe.">
-                <span class="st-name">Polyvalence</span><span class="st-level expert">Expert</span>
-              </div>
-              <div class="skill-tag" data-detail="Interaction naturelle, gestion de communauté live.">
-                <span class="st-name">Contact humain</span><span class="st-level expert">Expert</span>
-              </div>
-              <div class="skill-tag" data-detail="Résistance au stress, concentration sous pression.">
-                <span class="st-name">Gestion du stress</span><span class="st-level avance">Avancé</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skills-infos reveal">
-          <div class="info-pill"><i class="fas fa-flag"></i> Français natif</div>
-          <div class="info-pill"><i class="fas fa-car"></i> Permis B</div>
-          <div class="info-pill"><i class="fas fa-check-circle"></i> Disponible</div>
-          <div class="info-pill"><i class="fas fa-map-marker-alt"></i> Île-de-France + déplacements</div>
-        </div>
-        <div class="skill-tooltip" id="skill-tooltip" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ 04 SHOWREEL / BANDE DÉMO ═══════════════ -->
-    <section id="showreel" class="section showreel-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Portfolio vidéo</span>
-          <h2>Bande Démo</h2>
-        </div>
-        <p class="section-intro reveal">Survolez pour lire · Cliquez pour plein écran</p>
-      </div>
-      <div class="bento-grid reveal">
-        <!-- Tall item -->
-        <div class="bento-item bento-tall" data-video="grandpere.mp4" data-title="Rôle Grand-Père" data-tags="Court-métrage · 2024 · Comédie">
-          <img src="minia-insta.jpg" alt="Rôle grand-père format vertical" loading="lazy" class="bento-thumb">
-          <video src="grandpere.mp4" class="bento-video" loop muted playsinline preload="none"></video>
-          <div class="bento-overlay">
-            <div class="bento-tags"><span>Court-métrage</span><span>2024</span><span>Comédie</span></div>
-            <p class="bento-title">Rôle Grand-Père</p>
-            <button class="bento-play" aria-label="Voir en plein écran"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-        <!-- Mid items -->
-        <div class="bento-item bento-mid" data-video="videolarge2.mp4" data-title="Collaboration Warner Bros" data-tags="Warner Bros · 2024 · Publicité">
-          <img src="1image.jpg" alt="Tournage Warner Bros" loading="lazy" class="bento-thumb">
-          <video src="videolarge2.mp4" class="bento-video" loop muted playsinline preload="none"></video>
-          <div class="bento-overlay">
-            <div class="bento-tags"><span>Warner Bros</span><span>2024</span><span>Publicité</span></div>
-            <p class="bento-title">Collaboration Warner Bros</p>
-            <button class="bento-play" aria-label="Voir en plein écran"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-        <div class="bento-item bento-mid" data-video="videolarge1.mp4" data-title="Free France × Warner Bros" data-tags="Free · Warner Bros · Fiction">
-          <img src="2image.jpeg" alt="Tournage Free France" loading="lazy" class="bento-thumb">
-          <video src="videolarge1.mp4" class="bento-video" loop muted playsinline preload="none"></video>
-          <div class="bento-overlay">
-            <div class="bento-tags"><span>Free France</span><span>Fiction</span></div>
-            <p class="bento-title">Free France × Warner Bros</p>
-            <button class="bento-play" aria-label="Voir en plein écran"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-        <!-- Wide item -->
-        <div class="bento-item bento-wide" data-video="grandpere.mp4" data-title="Nouveau court-métrage" data-tags="Court-métrage · 2025 · Drame">
-          <img src="minia-insta.jpg" alt="Nouveau court-métrage" loading="lazy" class="bento-thumb">
-          <video src="grandpere.mp4" class="bento-video" loop muted playsinline preload="none"></video>
-          <div class="bento-overlay">
-            <div class="bento-tags"><span>Court-métrage</span><span>2025</span><span>Drame</span></div>
-            <p class="bento-title">Nouveau court-métrage</p>
-            <button class="bento-play" aria-label="Voir en plein écran"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video lightbox -->
-      <div id="video-lb" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
-        <button class="vlb-close" id="vlb-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
-        <div class="vlb-inner">
-          <p class="vlb-title" id="vlb-title"></p>
-          <div class="vlb-tags" id="vlb-tags"></div>
-          <video id="vlb-video" controls playsinline></video>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ 05 EXPERIENCES ═══════════════ -->
-    <section id="experiences" class="section exp-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Parcours</span>
-          <h2>Expériences</h2>
-        </div>
-        <div class="exp-filters reveal">
-          <button class="filter-btn active" data-filter="all">Tout</button>
-          <button class="filter-btn" data-filter="cinema">Cinéma</button>
-          <button class="filter-btn" data-filter="tv">TV</button>
-          <button class="filter-btn" data-filter="digital">Digital</button>
-        </div>
-        <div class="timeline" id="timeline">
-          <div class="timeline-line" aria-hidden="true"></div>
-
-          <article class="tl-item reveal" data-cat="cinema">
-            <div class="tl-marker"><i class="fas fa-film"></i></div>
-            <div class="tl-card">
-              <span class="tl-badge cinema">Cinéma</span>
-              <h3>Figuration — Film <em>Garance</em></h3>
-              <time class="tl-date"><i class="fas fa-calendar"></i> Septembre 2025</time>
-              <p>Rôle de figurant dans une production cinématographique. Rencontres avec des professionnels du secteur et découverte des coulisses d'un tournage long-format.</p>
-              <div class="tl-learn"><strong>Apports :</strong> Réseautage · Workflow de tournage · Discipline plateau</div>
-            </div>
-          </article>
-
-          <article class="tl-item reveal" data-cat="cinema" data-delay="80">
-            <div class="tl-marker"><i class="fas fa-clapperboard"></i></div>
-            <div class="tl-card">
-              <span class="tl-badge cinema">Cinéma / Pub</span>
-              <h3>Tournage Warner Bros France &amp; Free France</h3>
-              <time class="tl-date"><i class="fas fa-calendar"></i> 2025</time>
-              <p>Expérience auprès d'une agence professionnelle internationale. Rôle comique unique, travail de maquillage intensif et coordination avec équipes techniques multiples.</p>
-              <div class="tl-learn"><strong>Apports :</strong> Maquillage pro · Multi-caméras · Coordination internationale</div>
-            </div>
-          </article>
-
-          <article class="tl-item reveal" data-cat="tv" data-delay="160">
-            <div class="tl-marker"><i class="fas fa-tv"></i></div>
-            <div class="tl-card">
-              <span class="tl-badge tv">Télévision</span>
-              <h3>TF1 — Les 12 Coups de Midi</h3>
-              <time class="tl-date"><i class="fas fa-calendar"></i> 2023</time>
-              <p>Sélectionné parmi plus de 100 candidats pour une prestation face caméra en direct national. Gestion exemplaire du stress devant des millions de téléspectateurs.</p>
-              <div class="tl-learn"><strong>Apports :</strong> Confiance caméra · Naturalité sous pression · Live national</div>
-            </div>
-          </article>
-
-          <article class="tl-item reveal" data-cat="digital" data-delay="240">
-            <div class="tl-marker"><i class="fab fa-youtube"></i></div>
-            <div class="tl-card">
-              <span class="tl-badge digital">Digital</span>
-              <h3>Vidéo immersive YouTube</h3>
-              <time class="tl-date"><i class="fas fa-calendar"></i> 2023</time>
-              <p>Rôle maquillé (grand-père) dans un cache-cache géant. Improvisation, mime, jeu comique. Tournage multi-caméra synchronisé pour une chaîne à forte audience.</p>
-              <div class="tl-learn"><strong>Apports :</strong> Improvisation comique · Synchronisation multi-cam · Jeu physique</div>
-            </div>
-          </article>
-
-          <article class="tl-item reveal tl-hidden" data-cat="digital" data-delay="320">
-            <div class="tl-marker"><i class="fab fa-twitch"></i></div>
-            <div class="tl-card">
-              <span class="tl-badge digital">Digital</span>
-              <h3>Streamer caritatif — Twitch</h3>
-              <time class="tl-date"><i class="fas fa-calendar"></i> 2021 – 2023</time>
-              <p>Créateur de contenu live. Plus de 1 200 abonnés, 1 620 € récoltés pour des associations. Maîtrise totale caméra, improvisation continue, gestion de communauté.</p>
-              <div class="tl-learn"><strong>Apports :</strong> Aisance caméra · Adaptation temps réel · Leadership communautaire</div>
-            </div>
-          </article>
-
-          <article class="tl-item reveal tl-hidden" data-cat="cinema" data-delay="400">
-            <div class="tl-marker"><i class="fas fa-mask"></i></div>
-            <div class="tl-card">
-              <span class="tl-badge cinema">Scène</span>
-              <h3>Préparation statue vivante</h3>
-              <time class="tl-date"><i class="fas fa-calendar"></i> 2022</time>
-              <p>Travail approfondi de personnage et maquillage professionnel. Créativité et implication saluées par la direction artistique malgré l'annulation finale du projet.</p>
-              <div class="tl-learn"><strong>Apports :</strong> Création de personnage · Maquillage artistique · Résilience</div>
-            </div>
-          </article>
-        </div>
-        <div class="exp-more reveal">
-          <button id="exp-more-btn" class="btn btn-outline">
-            <i class="fas fa-chevron-down"></i> Voir plus d'expériences
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ 06 GALLERY ═══════════════ -->
-    <section id="gallery" class="section gallery-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Photos</span>
-          <h2>Galerie</h2>
-        </div>
-      </div>
-      <div class="gallery-grid" id="gallery-grid">
-        <div class="gallery-item reveal gi-tall"   data-index="0"><img src="1.jpg"          alt="Marc Lory — Portrait"    loading="lazy"><div class="gi-overlay"><span>Portrait · 2024</span><button class="gi-zoom" data-index="0" aria-label="Agrandir"><i class="fas fa-expand-alt"></i></button></div></div>
-        <div class="gallery-item reveal gi-wide"   data-index="1" data-delay="60"><img src="2.jpg"   alt="Marc Lory — Tournage"    loading="lazy"><div class="gi-overlay"><span>Tournage · Warner Bros</span><button class="gi-zoom" data-index="1" aria-label="Agrandir"><i class="fas fa-expand-alt"></i></button></div></div>
-        <div class="gallery-item reveal gi-square" data-index="2" data-delay="90"><img src="3.jpg"   alt="Marc Lory — Plateau"     loading="lazy"><div class="gi-overlay"><span>Plateau · 2024</span><button class="gi-zoom" data-index="2" aria-label="Agrandir"><i class="fas fa-expand-alt"></i></button></div></div>
-        <div class="gallery-item reveal gi-square gallery-hidden" data-index="3" data-delay="80"><img src="4.jpg"  alt="Marc Lory — Expression"  loading="lazy"><div class="gi-overlay"><span>Expression · 2024</span><button class="gi-zoom" data-index="3" aria-label="Agrandir"><i class="fas fa-expand-alt"></i></button></div></div>
-        <div class="gallery-item reveal gi-tall   gallery-hidden" data-index="4" data-delay="140"><img src="5.jpg" alt="Marc Lory — Profil"       loading="lazy"><div class="gi-overlay"><span>Profil · 2023</span><button class="gi-zoom" data-index="4" aria-label="Agrandir"><i class="fas fa-expand-alt"></i></button></div></div>
-        <div class="gallery-item reveal gi-wide   gallery-hidden" data-index="5" data-delay="180"><img src="6.jpg" alt="Marc Lory — Casting"      loading="lazy"><div class="gi-overlay"><span>Casting · 2023</span><button class="gi-zoom" data-index="5" aria-label="Agrandir"><i class="fas fa-expand-alt"></i></button></div></div>
-      </div>
-      <div class="gallery-actions container reveal">
-        <button id="gallery-more-btn" class="btn btn-outline"><i class="fas fa-images"></i> Voir toutes les photos</button>
-        <a href="https://www.instagram.com/marc_comedien_figurant" target="_blank" rel="noopener" class="btn btn-insta"><i class="fab fa-instagram"></i> Suivre sur Instagram</a>
-      </div>
-    </section>
-
-    <!-- Photo lightbox -->
-    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie photo">
-      <button class="lb-close" id="lb-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
-      <button class="lb-prev"  id="lb-prev"  aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
-      <div class="lb-content">
-        <img id="lb-img" src="" alt="">
-        <p class="lb-counter" id="lb-counter"></p>
-      </div>
-      <button class="lb-next"  id="lb-next"  aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
-    </div>
-
-    <!-- ═══════════════ 07 SOCIAL / INSTAGRAM ═══════════════ -->
-    <section id="social" class="section social-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Réseaux sociaux</span>
-          <h2>Suivez l'aventure</h2>
-        </div>
-
-        <!-- Counters -->
-        <div class="social-counters reveal">
-          <div class="sc-card">
-            <i class="fab fa-instagram sc-icon"></i>
-            <span class="sc-num" data-target="33">0</span>
-            <span class="sc-lbl">Abonnés Instagram</span>
-          </div>
-          <div class="sc-card">
-            <i class="fab fa-twitch sc-icon"></i>
-            <span class="sc-num" data-target="1200">0</span>
-            <span class="sc-lbl">Abonnés Twitch</span>
-          </div>
-          <div class="sc-card">
-            <i class="fab fa-linkedin sc-icon"></i>
-            <span class="sc-num" data-target="300">0</span>
-            <span class="sc-lbl">Connexions LinkedIn</span>
-          </div>
-          <div class="sc-card">
-            <i class="fas fa-photo-film sc-icon"></i>
-            <span class="sc-num" data-target="4">0</span>
-            <span class="sc-lbl">Projets publiés</span>
-          </div>
-        </div>
-
-        <!-- Instagram feed real posts -->
-        <div class="insta-feed reveal">
-          <div class="insta-header">
-            <i class="fab fa-instagram"></i>
-            <a href="https://www.instagram.com/marc_comedien_figurant" target="_blank" rel="noopener">@marc_comedien_figurant</a>
-          </div>
-          <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
-          <script src="https://elfsightcdn.com/platform.js" async></script>
-          <div class="elfsight-app-fa7228fc-3eec-44c4-848d-fa5121a30666" data-elfsight-app-lazy></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ 09 FAQ ═══════════════ -->
-    <section id="faq" class="section faq-section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Questions fréquentes</span>
-          <h2>FAQ</h2>
-        </div>
-        <div class="faq-grid">
-          <div class="faq-list reveal">
-            <details class="faq-item">
-              <summary class="faq-q">Êtes-vous disponible rapidement pour un projet ?<span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
-              <div class="faq-a"><p>Oui, je suis disponible pour des projets à très court préavis. Je peux me libérer en 24 à 48h selon les besoins du tournage. Contactez-moi directement pour vérifier mes disponibilités précises.</p></div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-q">Avez-vous un agent ou représentant ?<span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
-              <div class="faq-a"><p>Je travaille actuellement en direct via mon profil Nawak et ce portfolio. Je suis joignable directement par email ou téléphone pour toute proposition, ce qui facilite les échanges et accélère la prise de décision.</p></div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-q">Quels types de rôles acceptez-vous ?<span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
-              <div class="faq-a"><p>Je suis polyvalent : figuration simple, rôles avec texte, rôles comiques, dramatiques, doublure. Cinéma, télévision, publicité, web et événementiel. Aucun projet n'est trop petit ou trop grand.</p></div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-q">Êtes-vous mobile ? Pouvez-vous vous déplacer ?<span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
-              <div class="faq-a"><p>Oui. Basé à Ecquevilly (78), je suis véhiculé et titulaire du permis B. Je peux me déplacer sur toute l'Île-de-France et en France selon les projets.</p></div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-q">Avez-vous une expérience en tournage professionnel ?<span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
-              <div class="faq-a"><p>Oui. J'ai participé à des productions avec Warner Bros France, Free France, TF1 et plusieurs courts-métrages indépendants. Je connais les codes du plateau : discipline, silence, placement caméra, hiérarchie d'équipe.</p></div>
-            </details>
-            <details class="faq-item">
-              <summary class="faq-q">Quels sont vos tarifs ?<span class="faq-icon" aria-hidden="true"><i class="fas fa-plus"></i></span></summary>
-              <div class="faq-a"><p>Mes tarifs dépendent du type de projet, de la durée et des droits d'exploitation. Je suis ouvert à la discussion et m'adapte aux budgets des productions indépendantes. Contactez-moi pour un devis personnalisé.</p></div>
-            </details>
-          </div>
-          <div class="faq-cta reveal" data-delay="150">
-            <div class="faq-cta-inner">
-              <div class="faq-cta-icon"><i class="fas fa-comments"></i></div>
-              <h3>Autre question ?</h3>
-              <p>Je réponds à tous les messages sous 24h.</p>
-              <a href="#contact" class="btn btn-gold btn-full"><i class="fas fa-envelope"></i> Me contacter</a>
-              <div class="faq-quick">
-                <a href="tel:+33743673537"><i class="fas fa-phone"></i> 07 43 67 35 37</a>
-                <a href="mailto:lorymarc.pro@gmail.com"><i class="fas fa-at"></i> Email direct</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ 10 CONTACT ═══════════════ -->
-    <section id="contact" class="contact-section">
-      <div class="grain" aria-hidden="true"></div>
-      <div class="contact-inner container">
-        <div class="contact-headline reveal">
-          <span class="section-label">Travaillons ensemble</span>
-          <h2>Vous cherchez un comédien ?<br><em>Parlons-en.</em></h2>
-          <p>Disponible pour des tournages en Île-de-France et partout en France.</p>
-          <div class="contact-status">
-            <span class="status-dot" aria-label="Disponible"></span>Disponible dès maintenant · Réponse sous 24h
-          </div>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-form-wrap reveal">
-            <form action="https://formspree.io/f/xblkqabr" method="post" id="contact-form" novalidate>
-              <div class="form-row">
-                <label for="c-name">Nom complet *</label>
-                <div class="form-field"><i class="fas fa-user"></i><input type="text" id="c-name" name="name" placeholder="Votre nom" required autocomplete="name"></div>
-                <span class="field-err" id="err-name"></span>
-              </div>
-              <div class="form-row">
-                <label for="c-email">Email *</label>
-                <div class="form-field"><i class="fas fa-envelope"></i><input type="email" id="c-email" name="_replyto" placeholder="votre@email.com" required autocomplete="email"></div>
-                <span class="field-err" id="err-email"></span>
-              </div>
-              <div class="form-row">
-                <label for="c-subject">Type de projet</label>
-                <div class="form-field"><i class="fas fa-tag"></i>
-                  <select id="c-subject" name="subject">
-                    <option value="">Sélectionner…</option>
-                    <option>Long-métrage / Cinéma</option>
-                    <option>Court-métrage</option>
-                    <option>Publicité</option>
-                    <option>Série / Télévision</option>
-                    <option>Web / YouTube</option>
-                    <option>Événementiel</option>
-                    <option>Autre</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <label for="c-message">Message *</label>
-                <div class="form-field form-field-ta"><i class="fas fa-comment"></i><textarea id="c-message" name="message" rows="5" placeholder="Décrivez votre projet…" required></textarea></div>
-                <span class="field-err" id="err-msg"></span>
-              </div>
-              <button type="submit" class="btn btn-gold btn-full btn-lg" id="submit-btn">
-                <i class="fas fa-paper-plane"></i> Envoyer le message
-              </button>
-              <p class="form-note"><i class="fas fa-lock"></i> Vos données restent confidentielles</p>
-            </form>
-          </div>
-          <div class="cinfo-col reveal" data-delay="120">
-            <div class="cinfo-card">
-              <div class="cinfo-row"><div class="cinfo-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>Localisation</strong><span>78920 Ecquevilly, Île-de-France</span></div></div>
-              <div class="cinfo-row"><div class="cinfo-icon"><i class="fas fa-envelope"></i></div><div><strong>Email</strong><a href="mailto:lorymarc.pro@gmail.com">lorymarc.pro@gmail.com</a></div></div>
-              <div class="cinfo-row"><div class="cinfo-icon"><i class="fas fa-phone"></i></div><div><strong>Téléphone</strong><a href="tel:+33743673537">07 43 67 35 37</a></div></div>
-              <div class="cinfo-row"><div class="cinfo-icon"><i class="fas fa-clock"></i></div><div><strong>Réponse</strong><span>Sous 24h en semaine</span></div></div>
-              <div class="cinfo-divider"></div>
-              <div class="cinfo-socials">
-                <a href="https://www.instagram.com/marc_comedien_figurant" target="_blank" rel="noopener" class="csoc-btn ig" aria-label="Instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                <a href="https://www.linkedin.com/in/marc-l-938655214" target="_blank" rel="noopener" class="csoc-btn li" aria-label="LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-                <a href="https://nawak.com/book/marc-lory" target="_blank" rel="noopener" class="csoc-btn nw" aria-label="Nawak"><i class="fa-solid fa-n"></i><span>Nawak</span></a>
-              </div>
-              <button id="cv-inline-btn" class="btn btn-outline btn-full"><i class="fas fa-download"></i> Télécharger le CV</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ═══════════════ FOOTER ═══════════════ -->
-  <footer>
-    <div class="footer-inner container">
-      <div class="footer-brand">
-        <a href="#hero" class="footer-logo">Marc Lory</a>
-        <p class="footer-tagline">Comédien & Figurant — Île-de-France</p>
-        <p class="footer-copy">&copy; <span id="footer-year"></span> Marc Lory. Tous droits réservés.</p>
-        <p class="footer-credit">Site par <a href="mailto:lorymarc.pro@gmail.com">Ismael Chari</a>, développeur freelance.</p>
-        <div class="footer-legal">
-          <a href="privacy.html">Confidentialité</a><span aria-hidden="true">·</span>
-          <a href="conditions.html">CGU</a><span aria-hidden="true">·</span>
-          <a href="sitemap.xml">Sitemap</a>
-        </div>
-      </div>
-      <nav class="footer-nav" aria-label="Navigation secondaire">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#showreel">Bande démo</a></li>
-          <li><a href="#experiences">Expériences</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#social">Réseaux</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-right">
-        <h4>Suivez-moi</h4>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/marc_comedien_figurant" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/marc-l-938655214" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://nawak.com/book/marc-lory" target="_blank" rel="noopener" aria-label="Nawak"><i class="fa-solid fa-n"></i></a>
-        </div>
-        <div class="footer-newsletter">
-          <h4>Actualités</h4>
-          <p>Recevez mes nouvelles par email.</p>
-          <form class="newsletter-form" id="newsletter-form" novalidate>
-            <input type="email" placeholder="votre@email.com" aria-label="Email newsletter" required>
-            <button type="submit" aria-label="S'inscrire"><i class="fas fa-arrow-right"></i></button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <button id="back-top" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
-
-  <script src="script.js"></script>
 </body>
 </html>

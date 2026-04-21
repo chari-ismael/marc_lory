@@ -19,7 +19,7 @@ const CONFIG = {
 
   // ── CV sécurisé
   cv_code:           'CV26',   // code d'accès pour le CV
-  cv_url:            'CV2025vf.pdf', // URL/nom du fichier CV
+  cv_url:            './public/docs/CV-Marc-Lory-Comedien-2026.pdf', // URL/nom du fichier CV
 
   // ── Typewriter hero
   typewriter_words:  ['Comédien', 'Figurant', 'Créateur de contenu', 'Disponible'],
